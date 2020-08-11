@@ -26,11 +26,13 @@ $(".skill_button3").click(function() {
 });
 
 // TECHNOLOGY: TECHNOLOGIES SECTION -----------------------------
-// how many .skill_div are inside .technology_skills_div
+// get how many .skill_div are inside .technology_skills_div
 const childrenCount = $(".technology_skills_div .skill_div").length;
 
-const circle = document.querySelector('.animate_Stroke');
-const radius = circle.r.baseVal.value;
+// const circle = document.querySelector('.animate_Stroke');
+// const radius = circle.r.baseVal.value
+const circle = $(".animate_Stroke");
+const radius = parseInt(circle.attr("r"));
 const circumference = radius * 2 * Math.PI;
 
 let animateDashoffset = function(childIndex, percent) {
@@ -55,3 +57,8 @@ var skillsText = {
   skill2: "Skill 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duisaute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duisaute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   skill3: "Skill 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duisaute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 };
+
+// COPYRIGHT --------------------------------------------
+const currentYear = new Date().getFullYear();
+
+$(".copyright").html(`<p>© Mimina ${currentYear}</p>`);

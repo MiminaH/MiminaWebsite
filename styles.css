@@ -5,7 +5,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
 }
 
 h3 {
@@ -44,6 +43,7 @@ h3 {
   --text-lighter: #B9B9B9;
   /* setting main text color to dark grey */
   color: var(--text);
+  font-family: "Montserrat", sans-serif;
 }
 
 .orangeTheme {
@@ -167,15 +167,22 @@ nav a:nth-child(3) {
 .welcome_section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 85vh;
 }
 
-.welcome_h1 {
+.heading-container {
+  position: relative;
+  margin: 11% 15% 0 15%;
   font-family: "Caveat", sans-serif;
-  font-size: 100px;
-  color: var(--text);
-  margin: 0 0 10% 15%;
+  font-size: 4rem;
+}
+
+.signature {
+  position: absolute;
+  /* color: var(--main-theme); */
+  right: 0;
+  margin-top: 5%;
 }
 
 /************* ABOUT-ME SECTION *************/
@@ -377,7 +384,7 @@ nav a:nth-child(3) {
   color: blue;
 }
 
-.copyright_div {
+.copyright {
   display: flex;
   justify-content: center;
   align-content: flex-end;

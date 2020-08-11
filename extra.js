@@ -125,3 +125,13 @@ The server runs this file before loading the website.
 Can use it to do things like:
   - create a rewrite of url name.
 */
+
+
+// -------------- SVG
+/* I used below instead of this:
+    const circle = document.querySelector('.animate_Stroke');
+    const radius = circle.r.baseVal.value
+*/
+const circle = $(".animate_Stroke");
+const radius = parseInt(circle.attr("r"));
+const circumference = radius * 2 * Math.PI;
